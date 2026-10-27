@@ -134,6 +134,13 @@
             position: relative;
             z-index: 10;
         }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="bg-darkBg text-slate-100 min-h-screen selection:bg-cyan-500 selection:text-white">
@@ -160,6 +167,7 @@
                 </a>
                 <nav class="hidden md:flex space-x-10 text-sm font-medium text-slate-300">
                     <a href="#system-monitor" class="hover:text-cyan-400 transition">Live System Status</a>
+                    <a href="#demos" class="hover:text-cyan-400 transition">Template Demos</a>
                     <a href="#packages" class="hover:text-cyan-400 transition">Packages & SEO</a>
                     <a href="#hosting" class="hover:text-cyan-400 transition">Monthly Care</a>
                 </nav>
@@ -186,8 +194,8 @@
                 <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20get%20an%20AI-powered%20website%20started%20for%20my%20business." target="_blank" class="px-9 py-4.5 rounded-xl font-bold text-base bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-2xl shadow-cyan-500/40 hover:opacity-90 transition">
                     Start via WhatsApp
                 </a>
-                <a href="#system-monitor" class="px-9 py-4.5 rounded-xl font-bold text-base glass-card text-slate-200 hover:text-cyan-400 transition flex items-center justify-center">
-                    View Live System Status ↓
+                <a href="#demos" class="px-9 py-4.5 rounded-xl font-bold text-base glass-card text-slate-200 hover:text-cyan-400 transition flex items-center justify-center">
+                    Explore Live Demos ↓
                 </a>
             </div>
 
@@ -246,6 +254,192 @@
                     <p class="text-slate-400">&gt; checking built-in SEO indices & meta tags... [100% optimized]</p>
                     <p class="text-cyan-400">&gt; zero backend database bottlenecks detected. AI-powered performance online.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE TEMPLATE DEMOS CAROUSEL SECTION -->
+        <section id="demos" class="py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-white/10">
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest block mb-2 font-bold">Interactive Showcase</span>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Explore Live Template Demos</h2>
+                    <p class="text-base text-slate-400 max-w-xl mt-3">Scroll through our collection of pre-built industry templates. Click through to test live functionality hosted on GitHub Pages.</p>
+                </div>
+                <!-- Carousel Controls -->
+                <div class="flex space-x-3">
+                    <button onclick="scrollCarousel(-1)" class="w-12 h-12 rounded-2xl glass-card flex items-center justify-center text-white hover:border-cyan-500 transition focus:outline-none">
+                        ←
+                    </button>
+                    <button onclick="scrollCarousel(1)" class="w-12 h-12 rounded-2xl glass-card flex items-center justify-center text-white hover:border-cyan-500 transition focus:outline-none">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel Container -->
+            <div id="demo-carousel" class="flex gap-6 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-6 pt-2">
+                
+                <!-- Template 1: Pest Control -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <!-- Preview Mockup Image Container -->
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 01</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Pest Control Services</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">High-converting service landing page with emergency booking pipelines and trust badges.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-pest-control/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Pest%20Control%20Website%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 2: Fitness & Clothing -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 02</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Fitness & Clothing</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Dynamic athletic apparel showcase, workout scheduling, and WhatsApp direct checkout.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-fitness-clothing/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Fitness%20%26%20Clothing%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 3: Mobile Auto Care -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 03</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Mobile Auto Care</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">On-site vehicle detailing and mechanical service booking page with instant quote calculator.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-mobile-auto-care/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Mobile%20Auto%20Care%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 4: Warranty Support -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 04</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Warranty & Hardware Support</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">SLA and hardware warranty portal featuring client status checks and claim registration.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-warranty-support/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Warranty%20Support%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 5: Travel Website -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 05</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Tour Operator & Travel</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Immersive itinerary showcases, booking inquiry forms, and international tour packages.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-travel-website/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Travel%20Website%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 6: Deli Website -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 06</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Artisanal Deli & Compound Butters</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Gourmet food product showcase with product variants, Firebase backend, and cart orders.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-deli-website/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Deli%20Website%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 7: Small Bakery Website -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 07</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Home Bakery & Confectionery</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Mouth-watering menu grids for brownies, cookies, and rusks with WhatsApp direct ordering.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-small-bakery-website/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Small%20Bakery%20Website%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 8: Law Website -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 08</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Legal & Attorney Practice</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Professional legal consultancy layout with confidential consultation booking forms.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-law-website/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Law%20Website%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 9: Medical Practice -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 09</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Medical Practice & Clinic</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Clean clinical layout featuring practitioner profiles, operational hours, and appointment requests.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-medical-practice/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Medical%20Practice%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
+                <!-- Template 10: Plumbing & HVAC -->
+                <div class="min-w-[320px] sm:min-w-[380px] snap-start glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-44 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-600/10 border border-white/10 mb-6 overflow-hidden relative flex items-center justify-center">
+                            <span class="text-xs mono-font text-cyan-400 uppercase tracking-widest font-bold">Preview Mockup</span>
+                        </div>
+                        <div class="text-xs mono-font text-cyan-400 mb-2 tracking-widest font-extrabold uppercase">Template 10</div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Plumbing & HVAC Services</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">Emergency callout dispatch page, service area coverage, and direct quote requests.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="https://csdigital-agency.github.io/csda-template-plumbing-hvac/" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition block text-center shadow-lg shadow-cyan-500/20">Launch Live Demo ↗</a>
+                        <a href="https://wa.me/27833244779?text=Hi,%20I%20want%20to%20order%20the%20Plumbing%20%26%20HVAC%20template." target="_blank" class="w-full py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition block text-center text-xs tracking-wider uppercase">Order Template</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -408,8 +602,16 @@
         </footer>
     </div>
 
-    <!-- Neural Web Canvas Animation Script -->
+    <!-- Carousel & Neural Web Canvas Scripts -->
     <script>
+        // Carousel Scroll Function
+        function scrollCarousel(direction) {
+            const container = document.getElementById('demo-carousel');
+            const scrollAmount = 420; // width of card + gap
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        // Neural Canvas Animation
         const canvas = document.getElementById('neural-canvas');
         const ctx = canvas.getContext('2d');
 
